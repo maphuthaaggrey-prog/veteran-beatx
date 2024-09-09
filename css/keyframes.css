@@ -1,0 +1,41 @@
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.myphoto {
+    animation: bounce 5s infinite;
+    z-index: -1;
+}
+
+.about-photo {
+    animation: none;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero,
+section,
+.contact-hero {
+    animation: slideInUp .5s ease-in-out;
+}
