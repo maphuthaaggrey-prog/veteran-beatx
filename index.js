@@ -13,6 +13,7 @@ closeBtn.addEventListener('click', () => {
 
 
 
+
 //ON HOLD******
 const searchBtn = document.querySelector('.search-icon');
 const searchInput = document.querySelector('.search-input');
@@ -26,6 +27,11 @@ searchBtn.addEventListener('click', () => {
     listSearch.classList.toggle('appear-two');
 });
 
+
+
+
+
+//VALIDATE
 
 const form = document.querySelector('form');
 const nameInput = document.querySelector('input[name="name"]');
@@ -52,45 +58,35 @@ messageInput.parentNode.appendChild(messageError);
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Check if name is empty
+
   if (nameInput.value.trim() === '') {
     nameError.textContent = 'Please enter your name';
   } else {
     nameError.textContent = '';
   }
 
-// Check if tel is valid
-if (!telInput.value.match(/^\d{3}-\d{3}-\d{4}$/)) {
-    telError.textContent = 'Please enter a valid phone number (XXX-XXX-XXXX)';
-  } else {
-    telError.textContent = '';
-  }
-
-
-
-
-  // Check if email is valid
+ 
   if (!emailInput.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
     emailError.textContent = 'Please enter a valid email address';
   } else {
     emailError.textContent = '';
   }
 
-  // Check if tel is empty
+ 
   if (telInput.value.trim() === '') {
     telError.textContent = 'Please enter your phone number';
   } else {
     telError.textContent = '';
   }
 
-  // Check if message is empty
+  
   if (messageInput.value.trim() === '') {
-    messageError.textContent = 'Please enter a message';
+    messageError.textContent = 'Please enter your message';
   } else {
     messageError.textContent = '';
   }
 
-  // If all fields are valid, submit the form
+ 
   if (
     nameInput.value.trim() !== '' &&
     emailInput.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) &&
@@ -100,4 +96,3 @@ if (!telInput.value.match(/^\d{3}-\d{3}-\d{4}$/)) {
     form.submit();
   }
 });
-
