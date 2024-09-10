@@ -51,24 +51,30 @@ messageInput.parentNode.appendChild(messageError);
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
+  // Check if name is empty
   if (nameInput.value.trim() === '') {
     nameError.textContent = 'Please enter your name';
   } else {
     nameError.textContent = '';
   }
+
+// Check if tel is valid
 if (!telInput.value.match(/^\d{3}-\d{3}-\d{4}$/)) {
     telError.textContent = 'Please enter a valid phone number (XXX-XXX-XXXX)';
   } else {
     telError.textContent = '';
-  };
+  }
 
 
 
+
+  // Check if email is valid
   if (!emailInput.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
     emailError.textContent = 'Please enter a valid email address';
   } else {
     emailError.textContent = '';
-  };
+  }
 
   // Check if tel is empty
   if (telInput.value.trim() === '') {
@@ -82,7 +88,7 @@ if (!telInput.value.match(/^\d{3}-\d{3}-\d{4}$/)) {
     messageError.textContent = 'Please enter a message';
   } else {
     messageError.textContent = '';
-  };
+  }
 
   // If all fields are valid, submit the form
   if (
@@ -95,8 +101,3 @@ if (!telInput.value.match(/^\d{3}-\d{3}-\d{4}$/)) {
   }
 });
 
-
-    if (email == '' && password == '') {
-        form.submit();
-    }
-});
