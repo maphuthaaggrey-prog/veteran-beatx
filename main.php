@@ -24,4 +24,5 @@ if (mail($recipient, $subject, $mailmessage, $mailheader)) {
     echo "Message sent successfully!";
 } else {
     echo "Error sending message!";
-}
+};
+?>
