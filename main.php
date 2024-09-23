@@ -10,7 +10,7 @@ $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $message = filter_var($message, FILTER_SANITIZE_STRING);
 
 // Set the recipient and subject
-$recipient = "maphuthaaggrey83@gmail.com";
+$recipient = "veteranbeatx@gmail.com";
 $subject = "Message from $name";
 
 // Set the mail header
